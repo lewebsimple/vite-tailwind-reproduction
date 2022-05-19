@@ -2,4 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "./styles/imported.css";
+.not-in-layer {
+  @apply w-16 h-16 border border-blue-500;
+  background-image: url("./assets/1.png");
+}
+
+@layer components {
+  .in-layer {
+    @apply w-16 h-16 border border-red-500;
+    background-image: url("./assets/2.png");
+  }
+}
